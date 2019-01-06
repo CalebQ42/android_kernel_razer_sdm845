@@ -282,14 +282,15 @@ static int __init do_header(void)
 
 static int __init do_skip(void)
 {
-	if (this_header + byte_count < next_header) {
+	/* if (this_header + byte_count < next_header) {
 		eat(byte_count);
 		return 1;
 	} else {
 		eat(next_header - this_header);
 		state = next_state;
 		return 0;
-	}
+	}*/
+	return 0;
 }
 
 static int __init do_reset(void)
